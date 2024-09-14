@@ -1,25 +1,9 @@
-import { Tabs } from 'expo-router';
-import TabBar from '../components/TabBar';
+import { Stack } from 'expo-router/stack';
 
-const _layout = () => {
+export default function Layout() {
   return (
-    <Tabs TabBar={props => <TabBar {...props} />}>
-      <Tabs.Screen 
-        name='acceuil'
-        
-        options={{
-          title: 'Acceuil',
-          headerShown: false
-        }} />
-      <Tabs.Screen 
-        name='parametres'
-        options={{
-          title: 'Parametres',
-          headerShown: false
-        }} />
-    </Tabs>
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
   );
 }
-
-export default _layout;
-
